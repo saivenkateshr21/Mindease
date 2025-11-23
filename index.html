@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindEase - Mental Wellness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0d9488', // Teal 600
+              secondary: '#14b8a6', // Teal 500
+              accent: '#fcd34d', // Amber 300
+              background: '#f0fdfa', // Teal 50
+              surface: '#ffffff',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'breathe-in': 'breatheIn 4s ease-in-out forwards',
+              'breathe-out': 'breatheOut 4s ease-in-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fill-bar': 'fillBar linear forwards',
+              'draw-circle': 'drawCircle linear forwards',
+            },
+            keyframes: {
+              breatheIn: {
+                '0%': { transform: 'scale(1)', opacity: '0.8' },
+                '100%': { transform: 'scale(1.5)', opacity: '1' },
+              },
+              breatheOut: {
+                '0%': { transform: 'scale(1.5)', opacity: '1' },
+                '100%': { transform: 'scale(1)', opacity: '0.8' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fillBar: {
+                '0%': { width: '0%' },
+                '100%': { width: '100%' },
+              },
+              drawCircle: {
+                '0%': { strokeDashoffset: '289' },
+                '100%': { strokeDashoffset: '0' },
+              },
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f0fdfa;
+      }
+      .dark body {
+        background-color: #0f172a; /* slate-900 */
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
